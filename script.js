@@ -21,15 +21,20 @@ document.addEventListener("DOMContentLoaded", () => {
     list.innerHTML = "";
 
     tasks.forEach((task, index) => {
-      const li = document.createElement("li");
-      li.textContent = task;
+     const li = document.createElement("li");
 
-      const btn = document.createElement("button");
-      btn.textContent = "X";
-      btn.onclick = () => deleteTask(index);
+const span = document.createElement("span");
+span.textContent = task;
 
-      li.appendChild(btn);
-      list.appendChild(li);
+const checkbox = document.createElement("input");
+checkbox.type = "checkbox";
+
+checkbox.onchange = () => {
+  span.style.textDecoration = checkbox.checked ? "line-through" : "none";
+};
+
+li.appendChild(checkbox);
+li.appendChild(span);
     });
   }
 
