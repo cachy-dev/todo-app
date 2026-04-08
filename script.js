@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-  
+
 
   function addTask(task) {
     tasks.push(task);
@@ -21,20 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
     list.innerHTML = "";
 
     tasks.forEach((task, index) => {
-     const li = document.createElement("li");
+      const li = document.createElement("li");
 
-const span = document.createElement("span");
-span.textContent = task;
+      const span = document.createElement("span");
+      span.textContent = task;
 
-const checkbox = document.createElement("input");
-checkbox.type = "checkbox";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
 
-checkbox.onchange = () => {
-  span.style.textDecoration = checkbox.checked ? "line-through" : "none";
-};
+      checkbox.onchange = () => {
+        span.style.textDecoration = checkbox.checked ? "line-through" : "none";
+      };
 
-li.appendChild(checkbox);
-li.appendChild(span);
+      li.appendChild(checkbox);
+      li.appendChild(span);
+      list.appendChild(li);
     });
   }
 
