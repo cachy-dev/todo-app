@@ -12,12 +12,13 @@ input {
 button {
   padding: 8px;
   cursor: pointer;
+  margin-left: auto;
 }
 
 li {
-  diplay: flex;
+  display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 8px;
-  margin-left: auto;
+
 }
