@@ -29,12 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
 
+      const btn = document.createElement("button");
+      btn.textContent = "X";
+      btn.onclick = () => deleteTask(index);
+
       checkbox.onchange = () => {
         span.style.textDecoration = checkbox.checked ? "line-through" : "none";
       };
 
       li.appendChild(checkbox);
       li.appendChild(span);
+      li.appendChild(btn);
       list.appendChild(li);
     });
   }
