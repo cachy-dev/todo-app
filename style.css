@@ -15,5 +15,9 @@ button {
 }
 
 li {
-  margin-top: 10px;
+  diplay: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  margin-left: auto;
 }
